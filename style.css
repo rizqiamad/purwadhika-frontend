@@ -1,0 +1,29 @@
+p{
+    color: royalblue;
+}
+
+.mobil{
+    color: salmon;
+}
+
+#bmw{
+    color: aqua;
+}
+
+#toyota{
+    color: crimson;
+}
+
+.text{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+.konten{
+    border-radius: 10px;
+    background-color: aqua;
+    width: 200px;
+    height: 300px;
+    align-content: center;
+    border: 1px solid black;
+}
