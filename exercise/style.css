@@ -1,0 +1,39 @@
+.content{
+    text-align: center;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.content img{
+    height: 150px;
+}
+
+.content button{
+    width: 100px;
+    height: 45px;
+    background-color: #4069e2;
+    color: white;
+    border-radius: 10px;
+}
+
+.content button:hover{
+    cursor: pointer;
+}
+
+table{
+    background-color: #ffa500;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+td, th{
+    border: 2px solid black;
+    text-align: center;
+}
+
+table tr td img{
+    width: 120px;
+}
