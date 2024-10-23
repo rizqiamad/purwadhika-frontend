@@ -33,7 +33,7 @@ main{
 }
 
 .clear, .equal, .btn{
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
   align-content: center;
   background-color: white;
