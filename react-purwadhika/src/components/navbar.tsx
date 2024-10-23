@@ -21,7 +21,7 @@ function Navbar(props: IProp) {
           <Link to='/contact'>Contact</Link>
         </p>
       </div>
-      <p>Hello {props.name}</p>
+      <p>{props.name}</p>
     </nav>
   )
 }

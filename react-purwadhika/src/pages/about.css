@@ -1,0 +1,45 @@
+.main-about h1, .main-about .text-profile{
+  text-align: center;
+  margin: 20px 0;
+}
+
+.main-about h1{
+  font-size: 50px;
+}
+
+.main-about .content{
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  /* padding-left: 50px; */
+  gap: 100px;
+}
+
+.main-about .content .about-me{
+  max-width: 300px;
+}
+
+.main-about .content .about-me h2{
+  margin-bottom: 15px;
+}
+
+.main-about .content .about-me p{
+  line-height: 35px;
+  font-size: 21px;
+}
+
+.main-about .content .image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('../assets/hanifahmad.png');
+  background-position: -110px -50px;
+  background-color: #dfe3e6;
+  align-self: center;
+  margin-right: 70px;
+}
+
+.main-about .content .details h3, .main-about .content .details p{
+  font-size: larger;
+  margin-bottom: 20px;
+}

@@ -1,10 +1,8 @@
 .navbar{
   height: 50px;
   width: 100%;
-  background-color: royalblue;
   align-content: center;
   padding: 0 20px;
-  color: white;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -33,14 +31,16 @@
 .nav-center{
   display: flex;
   gap: 30px;
+  margin-left: 30px;
 }
 
 .nav-center p a{
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .nav-center p:hover{
+  transition: 0.5s;
   text-decoration: underline;
   opacity: 0.8;
   cursor: pointer;
