@@ -5,6 +5,7 @@
   display: flex;
   padding: 0 5rem;
   justify-content: space-around; 
+  overflow: hidden;
 }
 
 .main-home .text{
@@ -15,6 +16,19 @@
   max-width: 400px;
 }
 
+.main-home .text h1{
+  animation: go-in 2s ease;
+}
+
+@keyframes go-in {
+  from{
+    transform: translateY(300%);
+  }
+  to{
+    transform: translateY(0%);
+  }
+}
+
 .main-home .text .circle{
   width: 75px;
   height: 75px;
@@ -22,6 +36,16 @@
   border-radius: 50%;
   align-self: flex-start;
   margin-bottom: 30px;
+  animation: circle-in 2s ease;
+}
+
+@keyframes circle-in {
+  from{
+    transform: translateX(-350%);
+  }
+  to{
+    transform: translateX(0%);
+  }
 }
 
 .main-home .text h1{
@@ -30,6 +54,7 @@
 
 .main-home .text p{
   font-size: 13px;
+  animation: circle-in 2s ease;
 }
 
 .main-home .text button{
@@ -41,6 +66,7 @@
   align-self: flex-start;
   border: none;
   cursor: pointer;
+  animation: go-in 2s ease;
 }
 
 .main-home .text button:hover{

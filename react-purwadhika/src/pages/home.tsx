@@ -2,7 +2,7 @@ import './home.css'
 import Hanif from "../assets/hanifahmad.png";
 
 function Home() {
-  return ( 
+  return (
     <main className='main-home'>
       <div className="text">
         <div className="circle"></div>

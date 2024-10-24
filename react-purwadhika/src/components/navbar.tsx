@@ -12,7 +12,7 @@ function Navbar(props: IProp) {
       <img src={logo} alt="Logo" className='logo' />
       <div className='nav-center'>
         <p>
-          <Link to='/home'>Home</Link>
+          <Link to='/'>Home</Link>
         </p>
         <p>
           <Link to='/about'>About</Link>
