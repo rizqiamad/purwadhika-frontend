@@ -17,7 +17,7 @@ export default function Navbar() {
     };
   }, []);
   return (
-    <div className={`navbar fixed top-0 z-10 transition-all duration-300 ${scrollPosition === 0 ? 'bg-transparent text-white' : 'bg-white'}`}>
+    <div className={`navbar dark:bg-slate-950  fixed top-0 z-10 transition-all duration-300 ${scrollPosition === 0 ? 'dark:bg-transparent bg-transparent text-white' : 'bg-white'}`}>
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -37,18 +37,18 @@ export default function Navbar() {
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" className="dark:text-white">Home</a></li>
+            <li><a href="#about" className="dark:text-white">About</a></li>
+            <li><a href="#contact" className="dark:text-white">Contact</a></li>
           </ul>
         </div>
-      <a className="btn btn-ghost text-xl">Hanif Ahmad</a>
+      <a className="btn btn-ghost text-xl dark:text-white">Hanif Ahmad</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#home" className="dark:text-white">Home</a></li>
+          <li><a href="#about" className="dark:text-white">About</a></li>
+          <li><a href="#contact" className="dark:text-white">Contact</a></li>
         </ul>
       </div>
       <div className="navbar-end">
