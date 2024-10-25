@@ -1,0 +1,109 @@
+.main-about{
+  overflow: hidden;
+  height: calc(100vh - 50px);
+}
+
+.main-about h1, .main-about .text-profile{
+  text-align: center;
+  margin: 20px 0;
+  animation: top-in 2s ease;
+}
+
+@keyframes top-in {
+  from{
+    transform: translateY(-300%);
+  }
+  to{
+    transform: translateY(0%);
+  }
+}
+
+.main-about h1{
+  font-size: 50px;
+}
+
+.main-about .content{
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 100px;
+}
+
+.main-about .content .about-me{
+  max-width: 300px;
+  animation: left-in 2s ease;
+}
+
+@keyframes left-in {
+  from{
+    transform: translateX(-300%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+
+.main-about .content .about-me h2{
+  margin-bottom: 15px;
+}
+
+.main-about .content .about-me p{
+  line-height: 35px;
+  font-size: 21px;
+}
+
+.main-about .content .image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('../assets/hanifahmad.png');
+  background-position: -110px -50px;
+  background-color: #dfe3e6;
+  align-self: center;
+  margin-right: 70px;
+  animation: go-in 2s ease;
+}
+
+@keyframes go-in {
+  from{
+    transform: translateY(300%);
+  }
+  to{
+    transform: translateY(0%);
+  }
+}
+
+.main-about .content .details h3, .main-about .content .details p{
+  font-size: larger;
+  margin-bottom: 20px;
+}
+
+.main-about .content .details{
+  animation: right-in 2s ease;
+}
+
+@keyframes right-in {
+  from{
+    transform: translateX(300%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+
+@media screen and (max-width:1030px) {
+  .main-about .content{
+    padding: 0 25px;
+  }
+}
+
+@media screen and (max-width:1000px) {
+  .main-about{
+    overflow: auto;
+  }
+  .main-about .content{
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+  }
+}

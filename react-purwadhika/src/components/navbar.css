@@ -1,0 +1,49 @@
+.navbar{
+  height: 50px;
+  width: 100%;
+  align-content: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  width: 40px;
+  cursor: pointer;
+  animation: rotation 5s infinite linear;
+}
+
+.logo:hover{
+  animation-play-state: paused;
+}
+
+@keyframes rotation {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.nav-center{
+  display: flex;
+  gap: 30px;
+  margin-left: 30px;
+}
+
+.nav-center p a{
+  text-decoration: none;
+  color: black;
+}
+
+.nav-center p:hover{
+  transition: 0.5s;
+  text-decoration: underline;
+  opacity: 0.8;
+  cursor: pointer;
+  opacity: 0.8;
+  transform: translate(0, -2px);
+}
