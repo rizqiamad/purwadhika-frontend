@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <main className="flex justify-evenly min-h-[100vh] items-center max-md:flex-col py-16" id='contact'>
+    <main className="flex justify-evenly min-h-[100vh] items-center max-md:flex-col py-16 dark:bg-donker" id='contact'>
       <div className="w-[40%] max-md:w-[80%] max-md:mb-10">
         <h1 className="text-7xl mb-16 dark:text-white max-md:text-center max-lg:text-6xl max-md:text-7xl max-sm:text-6xl font-semibold">Contact Me</h1>
         <p className="text-[18px] line-[28px] dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas culpa, possimus, optio maxime vero unde quis quam quidem assumenda mollitia doloremque exercitationem at consectetur voluptatum, vitae totam est amet? Molestias aspernatur odit ex similique expedita, saepe vitae? Perferendis modi obcaecati iste, voluptatum distinctio molestiae vero atque porro quo tenetur nam!</p>

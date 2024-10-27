@@ -7,6 +7,9 @@ export default {
   ],
   theme: {
     extend: {
+      colors:{
+        'donker':'#0f172a'
+      },
       animation: {
         scroll: 'scroll 20s linear infinite',
       },

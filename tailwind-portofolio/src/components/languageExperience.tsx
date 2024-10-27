@@ -18,7 +18,7 @@ export default function Experience() {
   ];
 
   return (
-    <div className="relative">
+    <div className="relative dark:bg-donker">
       <h1 className="text-center text-3xl mb-5 font-bold dark:text-white">Tools and Experience</h1>
       <div className="py-5 overflow-hidden after:content-[' '] after:carousel-padding after:padding-after before:content-[' '] before:carousel-padding before:padding-before">
         <div className="flex gap-16 animate-scroll whitespace-nowrap hover:pause transition ease-linear">

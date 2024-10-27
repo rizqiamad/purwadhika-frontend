@@ -1,6 +1,7 @@
 import Logo from "../assets/logo.png";
 
 export default function Footer() {
+  const year:number = new Date().getFullYear()
   return (
     <footer className="footer p-10 text-black dark:bg-slate-900 dark:text-white">
       <aside>
@@ -8,7 +9,7 @@ export default function Footer() {
         <p>
           Author : Hanif Ahmad Rizqullah
           <br />
-          Copyright<sup>&copy;</sup> reserved 2024
+          Copyright<sup>&copy;</sup> reserved {year}
         </p>
       </aside>
       <nav>

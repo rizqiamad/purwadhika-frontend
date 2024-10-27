@@ -37,18 +37,18 @@ export default function Navbar() {
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-            <li><a href="#home" className="dark:text-white">Home</a></li>
-            <li><a href="#about" className="dark:text-white">About</a></li>
-            <li><a href="#contact" className="dark:text-white">Contact</a></li>
+            <li><a href="#home" className="dark:text-white font-semibold">Home</a></li>
+            <li><a href="#about" className="dark:text-white font-semibold">About</a></li>
+            <li><a href="#contact" className="dark:text-white font-semibold">Contact</a></li>
           </ul>
         </div>
       <a className="btn btn-ghost text-xl dark:text-white">Hanif Ahmad</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li><a href="#home" className="dark:text-white">Home</a></li>
-          <li><a href="#about" className="dark:text-white">About</a></li>
-          <li><a href="#contact" className="dark:text-white">Contact</a></li>
+          <li><a href="#home" className="dark:text-white font-semibold">Home</a></li>
+          <li><a href="#about" className="dark:text-white font-semibold">About</a></li>
+          <li><a href="#contact" className="dark:text-white font-semibold">Contact</a></li>
         </ul>
       </div>
       <div className="navbar-end">
