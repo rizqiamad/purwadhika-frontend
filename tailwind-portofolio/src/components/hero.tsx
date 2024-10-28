@@ -18,6 +18,7 @@ export default function Hero() {
         </div>
         <motion.div
           whileHover={{scale:1.05}}
+          whileTap={{scale:0.9}}
         >
           <div style={{ backgroundImage: `url(${Programmer})` }} className="w-[26rem] h-[28rem] bg-cover rounded-xl max-lg:w-[35rem] max-sm:w-[26rem] animate-rightIn ease-linear"></div>
         </motion.div>
