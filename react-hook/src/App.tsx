@@ -3,19 +3,26 @@
 // import State from "./components/state"
 // import Memo from "./components/memo"
 
-import { useState } from "react"
-import Context from "./components/context";
+import { createContext, useState } from "react"
+// import Context from "./components/context";
+// import ReducerComp from "./components/reducer";
+import CallbackComp from "./components/callback";
 
+export const UserContext = createContext<string>('');
 
 function App() {
-  const [user, setUser] = useState<string>('Andi');
+  const [user] = useState<string>('Andi');
   return (
     <>
-      {/* <State /> */}
-      {/* <Effect /> */}
-      {/* <RefComp /> */}
-      {/* <Memo /> */}
-      <Context />
+      <UserContext.Provider value={user}>
+        {/* <State /> */}
+        {/* <Effect /> */}
+        {/* <RefComp /> */}
+        {/* <Memo /> */}
+        {/* <Context /> */}
+        {/* <ReducerComp /> */}
+        <CallbackComp />
+      </UserContext.Provider>
     </>
   )
 }
