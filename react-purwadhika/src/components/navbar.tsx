@@ -20,6 +20,9 @@ function Navbar(props: IProp) {
         <p>
           <Link to='/contact'>Contact</Link>
         </p>
+        <p>
+          <Link to='/training'>Training</Link>
+        </p>
       </div>
       <p>{props.name}</p>
     </nav>

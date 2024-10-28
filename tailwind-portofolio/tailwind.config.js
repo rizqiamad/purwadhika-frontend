@@ -12,12 +12,22 @@ export default {
       },
       animation: {
         scroll: 'scroll 20s linear infinite',
+        rightIn: 'rightIn 2s linear',
+        leftIn: 'leftIn 2s linear',
       },
       keyframes: {
         scroll: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-100%)' },
-        }
+        },
+        rightIn:{
+          '0%':{transform:'translateX(100%)',opacity:'0'},
+          '100%': { transform: 'translateX(0)',opacity:'1' },
+        },
+        leftIn:{
+          '0%':{transform:'translateX(-100%)',opacity:'0'},
+          '100%': { transform: 'translateX(0)',opacity:'1' },
+        },
       },
     },
   },
