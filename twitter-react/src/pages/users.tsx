@@ -3,10 +3,12 @@ import axios from "../helpers/axios"
 import { FaTrash } from "react-icons/fa";
 import { IUser } from "../types/user";
 import Swal from 'sweetalert2'
+import { useNavigate } from "react-router-dom";
 
 export default function Users() {
   const [data, setData] = useState<IUser[]>([]);
   const [reload, setReload] = useState<boolean>(false)
+  const navigate = useNavigate();
 
   const getData = async () => {
     try {
@@ -61,9 +63,9 @@ export default function Users() {
           {
             data.map((user, idx) =>
               <tr key={idx} className="hover:bg-slate-200 hover:cursor-pointer">
-                <td className="p-2 border border-slate-300">{idx + 1}</td>
-                <td className="p-2 border border-slate-300">{user.username}</td>
-                <td className="p-2 border border-slate-300">{user.email}</td>
+                <td className="p-2 border border-slate-300" onClick={() => navigate(`/home/${user.id}`)}>{idx + 1}</td>
+                <td className="p-2 border border-slate-300" onClick={() => navigate(`/home/${user.id}`)}>{user.username}</td>
+                <td className="p-2 border border-slate-300" onClick={() => navigate(`/home/${user.id}`)}>{user.email}</td>
                 <td className="p-2 border border-slate-300">
                   <FaTrash className="text-red-500 hover:scale-[1.3] transition ease-linear" onClick={() => handleDelete(user)} />
                 </td>

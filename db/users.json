@@ -64,36 +64,9 @@
       ]
     },
     {
-      "id": "5bf5",
+      "id": "2586",
       "username": "naufal",
-      "email": "naufal@gmail.com",
-      "password": "test123",
-      "followers": [],
-      "follow": [],
-      "tweets": []
-    },
-    {
-      "id": "e257",
-      "username": "ahmad",
-      "email": "ahady@gmail.com",
-      "password": "hanif",
-      "followers": [],
-      "follow": [],
-      "tweets": []
-    },
-    {
-      "id": "d37a",
-      "username": "salman",
-      "email": "salman@gmail.com",
-      "password": "test123",
-      "followers": [],
-      "follow": [],
-      "tweets": []
-    },
-    {
-      "id": "8dcf",
-      "username": "adi",
-      "email": "adi@gmail.com",
+      "email": "naufal@googl.com",
       "password": "test123",
       "followers": [],
       "follow": [],

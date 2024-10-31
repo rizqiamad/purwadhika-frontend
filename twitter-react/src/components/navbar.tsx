@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import Avatar from "./avatar";
 
+interface Username{
+  
+}
+
 export default function Navbar() {
   return (
     <nav className="h-16 bg-sky-500 flex justify-between items-center gap-6 px-6">
