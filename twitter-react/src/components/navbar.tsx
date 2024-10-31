@@ -6,9 +6,9 @@ export default function Navbar() {
     <nav className="h-16 bg-sky-500 flex justify-between items-center gap-6 px-6">
       <div className="flex gap-10">
         <Link to={'/'} className="hover:text-white transition ease-linear">Home</Link>
-        <Link to={'/'} className="hover:text-white transition ease-linear">Profile</Link>
       </div>
-      <div>
+      <div className="flex items-center gap-6">
+        <Link to={'/'} className="hover:text-white transition ease-linear">Users</Link>
         <Avatar />
       </div>
     </nav>
