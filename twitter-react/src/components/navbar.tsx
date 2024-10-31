@@ -8,7 +8,7 @@ export default function Navbar() {
         <Link to={'/'} className="hover:text-white transition ease-linear">Home</Link>
       </div>
       <div className="flex items-center gap-6">
-        <Link to={'/'} className="hover:text-white transition ease-linear">Users</Link>
+        <Link to={'/users'} className="hover:text-white transition ease-linear">Users</Link>
         <Avatar />
       </div>
     </nav>

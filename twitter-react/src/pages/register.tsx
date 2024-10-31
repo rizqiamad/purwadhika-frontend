@@ -2,6 +2,7 @@ import { Field, Form, Formik, FormikProps } from 'formik'
 import * as Yup from 'yup'
 import axios from '../helpers/axios'
 import { useNavigate } from 'react-router-dom'
+import { ITweet } from '../types/user'
 
 const RegisterSchema = Yup.object().shape({
   username: Yup.string().required('username is required'),
@@ -17,11 +18,14 @@ interface FormValue {
   username: string
   email: string
   password: string
+  followers: string[]
+  follow: string[]
+  tweets: ITweet[]
 }
 
 export default function RegisterPage() {
   const navigate = useNavigate()
-  const initialValue: FormValue = { username: '', email: '', password: '' }
+  const initialValue: FormValue = { username: '', email: '', password: '', followers: [], follow: [], tweets: [] }
 
   const handleAdd = async (user: FormValue) => {
     try {
