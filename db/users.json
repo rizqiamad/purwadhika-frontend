@@ -5,8 +5,14 @@
       "username": "Hanif",
       "email": "hanifahmad@gmail.com",
       "password": "test123",
-      "followers": ["2", "3"],
-      "follow": ["2", "3"],
+      "followers": [
+        "2",
+        "3"
+      ],
+      "follow": [
+        "2",
+        "3"
+      ],
       "tweets": [
         {
           "id": "t1",
@@ -20,8 +26,14 @@
       "username": "Ahmad",
       "email": "ahmad@gmail.com",
       "password": "test123",
-      "followers": ["2", "3"],
-      "follow": ["2", "3"],
+      "followers": [
+        "2",
+        "3"
+      ],
+      "follow": [
+        "2",
+        "3"
+      ],
       "tweets": [
         {
           "id": "t1",
@@ -35,8 +47,14 @@
       "username": "Rizqi",
       "email": "rizqi@gmail.com",
       "password": "test123",
-      "followers": ["2", "3"],
-      "follow": ["2", "3"],
+      "followers": [
+        "2",
+        "3"
+      ],
+      "follow": [
+        "2",
+        "3"
+      ],
       "tweets": [
         {
           "id": "t1",
@@ -44,6 +62,42 @@
           "timestamp": "2024-10-31T12:00:00Z"
         }
       ]
+    },
+    {
+      "id": "5bf5",
+      "username": "naufal",
+      "email": "naufal@gmail.com",
+      "password": "test123",
+      "followers": [],
+      "follow": [],
+      "tweets": []
+    },
+    {
+      "id": "e257",
+      "username": "ahmad",
+      "email": "ahady@gmail.com",
+      "password": "hanif",
+      "followers": [],
+      "follow": [],
+      "tweets": []
+    },
+    {
+      "id": "d37a",
+      "username": "salman",
+      "email": "salman@gmail.com",
+      "password": "test123",
+      "followers": [],
+      "follow": [],
+      "tweets": []
+    },
+    {
+      "id": "8dcf",
+      "username": "adi",
+      "email": "adi@gmail.com",
+      "password": "test123",
+      "followers": [],
+      "follow": [],
+      "tweets": []
     }
   ]
 }
