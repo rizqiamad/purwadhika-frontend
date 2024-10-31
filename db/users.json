@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "Hanif",
+      "email": "hanifahmad@gmail.com",
+      "password": "test123",
+      "followers": ["2", "3"],
+      "follow": ["2", "3"],
+      "tweets": [
+        {
+          "id": "t1",
+          "content": "Aku suka makan nasi",
+          "timestamp": "2024-10-31T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "username": "Ahmad",
+      "email": "ahmad@gmail.com",
+      "password": "test123",
+      "followers": ["2", "3"],
+      "follow": ["2", "3"],
+      "tweets": [
+        {
+          "id": "t1",
+          "content": "Aku suka makan nasi",
+          "timestamp": "2024-10-31T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "username": "Rizqi",
+      "email": "rizqi@gmail.com",
+      "password": "test123",
+      "followers": ["2", "3"],
+      "follow": ["2", "3"],
+      "tweets": [
+        {
+          "id": "t1",
+          "content": "Aku suka makan nasi",
+          "timestamp": "2024-10-31T12:00:00Z"
+        }
+      ]
+    }
+  ]
+}
