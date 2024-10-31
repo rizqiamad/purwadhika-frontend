@@ -1,76 +1,34 @@
 {
   "users": [
     {
-      "id": "1",
-      "username": "Hanif",
-      "email": "hanifahmad@gmail.com",
-      "password": "test123",
-      "followers": [
-        "2",
-        "3"
-      ],
-      "follow": [
-        "2",
-        "3"
-      ],
-      "tweets": [
-        {
-          "id": "t1",
-          "content": "Aku suka makan nasi",
-          "timestamp": "2024-10-31T12:00:00Z"
-        }
-      ]
+      "id": "b7b1",
+      "username": "salman",
+      "email": "salman@gmail.com",
+      "password": "test123"
     },
     {
-      "id": "2",
-      "username": "Ahmad",
-      "email": "ahmad@gmail.com",
-      "password": "test123",
-      "followers": [
-        "2",
-        "3"
-      ],
-      "follow": [
-        "2",
-        "3"
-      ],
-      "tweets": [
-        {
-          "id": "t1",
-          "content": "Aku suka makan nasi",
-          "timestamp": "2024-10-31T12:00:00Z"
-        }
-      ]
+      "id": "4202",
+      "username": "ahady",
+      "email": "ahady@gmail.com",
+      "password": "*[olban"
     },
     {
-      "id": "3",
-      "username": "Rizqi",
-      "email": "rizqi@gmail.com",
-      "password": "test123",
-      "followers": [
-        "2",
-        "3"
-      ],
-      "follow": [
-        "2",
-        "3"
-      ],
-      "tweets": [
-        {
-          "id": "t1",
-          "content": "Aku suka makan nasi",
-          "timestamp": "2024-10-31T12:00:00Z"
-        }
-      ]
-    },
-    {
-      "id": "2586",
+      "id": "a433",
       "username": "naufal",
-      "email": "naufal@googl.com",
-      "password": "test123",
-      "followers": [],
-      "follow": [],
-      "tweets": []
+      "email": "ahmadhanif759@gmail.com",
+      "password": "*asdfasdf"
+    },
+    {
+      "id": "b29a",
+      "username": "hanif",
+      "email": "hanig@google.com",
+      "password": "aksdf;ja"
+    },
+    {
+      "id": "1f3c",
+      "username": "nakulastories",
+      "email": "nakula@gmail.com",
+      "password": "asdfsf"
     }
   ]
 }

@@ -1,15 +1,12 @@
 export interface IUser {
-  id: string
-  username: string
-  email: string
-  password: string
-  followers: string[]
-  follow: string[]
-  tweets: ITweet[]
+  id: string;
+  username: string;
+  email: string;
+  password: string;
 }
 
-export interface ITweet{
-  id: string
-  content: string
-  timestamp: string
+export interface FormValue{
+  username: string
+  email: string;
+  password: string;
 }
