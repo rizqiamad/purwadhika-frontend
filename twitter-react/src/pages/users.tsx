@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react"
 import axios from "../helpers/axios"
 import { FaTrash } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
 import { IUser } from "../types/user";
+import Swal from 'sweetalert2'
 
 export default function Users() {
-  const navigate = useNavigate()
   const [data, setData] = useState<IUser[]>([]);
   const [reload, setReload] = useState<boolean>(false)
 
@@ -19,13 +18,24 @@ export default function Users() {
   }
 
   const handleDelete = async (user: IUser) => {
-    const confirmSubmit = confirm(`apakah yakin ingin menghapus data ${user.username}?`)
-    if (confirmSubmit) {
+    const result = await Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    })
+    if (result.isConfirmed) {
       try {
-        await axios.delete(`/user/${user.id}`)
+        await axios.delete(`/users/${user.id}`)
+        await Swal.fire({
+          title: "Deleted!",
+          text: `data ${user.username} has been deleted`,
+          icon: "success"
+        });
         setReload(!reload)
-        alert(`data ${user.username} berhasil dihapus`)
-        navigate('/')
       } catch (err) {
         console.log(err)
       }
