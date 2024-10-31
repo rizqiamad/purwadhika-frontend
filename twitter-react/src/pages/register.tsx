@@ -1,7 +1,7 @@
 import { Field, Form, Formik, FormikProps } from 'formik'
 import * as Yup from 'yup'
 import axios from '../helpers/axios'
-import { useNavigate } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 import { ITweet } from '../types/user'
 
 const RegisterSchema = Yup.object().shape({
@@ -23,7 +23,7 @@ interface FormValue {
   tweets: ITweet[]
 }
 
-export default function RegisterPage() {
+export default function RegisterPage({ onRegister }: any) {
   const navigate = useNavigate()
   const initialValue: FormValue = { username: '', email: '', password: '', followers: [], follow: [], tweets: [] }
 
@@ -31,6 +31,7 @@ export default function RegisterPage() {
     try {
       await axios.post('/users', user)
       alert('user berhasil di tambahkan')
+      onRegister();
       navigate('/')
     } catch (err) {
       console.log(err)
