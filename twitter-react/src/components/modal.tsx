@@ -3,9 +3,10 @@ import { ReactElement, useRef } from "react";
 interface Child{
   children: ReactElement
   style: string
+  name: string
 }
 
-export default function Modal({ children, style }:Child) {
+export default function Modal({ children, style, name }:Child) {
   const dialogRef = useRef<HTMLDialogElement>(null)
 
   const openModal = () => {
@@ -14,7 +15,7 @@ export default function Modal({ children, style }:Child) {
 
   return (
     <>
-      <button className={`h-10 rounded-3xl ${style} text-white font-semibold`} onClick={openModal}>Buat akun</button>
+      <button className={`h-10 rounded-3xl ${style} text-white font-semibold`} onClick={openModal}>{name}</button>
       <dialog ref={dialogRef} id="my_modal_3" className="modal">
         <div className="modal-box bg-black">
           <form method="dialog">

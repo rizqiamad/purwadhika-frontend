@@ -25,12 +25,12 @@ export default function RegisterPage() {
               Daftar dengan Apple
             </button>
             <div className="divider text-white">atau</div>
-            <Modal style='bg-[#1d9bf0]'>
+            <Modal style='bg-[#1d9bf0]' name='Buat akun'>
               <Register />
             </Modal>
             <p className='text-[0.7rem] mb-12 text-white'>Dengan mendaftar, Anda menyetujui <span className='cursor-pointer text-[#1d9bf0]'>Persyaratan Layanan</span> dan <span className='cursor-pointer text-[#1d9bf0]'>Kebijakan Privasi</span>, termasuk <span className='cursor-pointer text-[#1d9bf0]'>Penggunaan Kuki</span>.</p>
             <p className='text-xl font-semibold text-white mb-2'>Sudah punya akun?</p>
-            <Modal style='border border-[#1d9bf0]'>
+            <Modal style='border border-[#1d9bf0]' name='Masuk'>
               <Login />
             </Modal>
           </div>

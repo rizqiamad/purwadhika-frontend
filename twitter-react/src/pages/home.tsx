@@ -6,11 +6,10 @@ export default function Home() {
   return (
     <>
       <div className="flex min-h-[100vh] fixed">
-        <div className="w-[362px] flex flex-col items-end px-10">
+        <div className="max-w-[22.6rem] flex flex-col items-end px-16 max-xl:w-0">
           <Sidebar />
         </div>
-        <div className="bg-slate-300 w-[600px] overflow-y-scroll">
-          <div className="w-100 bg-yellow-200 h-96"></div>
+        <div className="bg-slate-300 min-w-[37.5rem] overflow-y-scroll">
         </div>  
         <div className="bg-slate-500 grow"></div>
       </div>

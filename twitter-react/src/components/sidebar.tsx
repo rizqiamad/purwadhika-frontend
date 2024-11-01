@@ -29,8 +29,8 @@ export default function Sidebar() {
       <div className="w-[80%] flex items-center gap-2">
         <Avatar initial={dataUser?.username.charAt(0).toUpperCase()}/>
         <div>
-          <h1 className="text-white">{dataUser?.username}</h1>
-          <h1 className="text-white">{dataUser?.email}</h1>
+          <h1 className="text-white max-xl:hidden">{dataUser?.username}</h1>
+          <h1 className="text-white max-xl:hidden">{dataUser?.email}</h1>
         </div>
       </div>
     </>
