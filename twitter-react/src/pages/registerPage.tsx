@@ -2,6 +2,8 @@ import X from '../assets/logo.svg'
 import Apple from "../assets/apple.png";
 import Google from "../assets/google.png";
 import Modal from '../components/modal';
+import Register from '../components/register/register';
+import Login from '../components/login/login';
 
 export default function RegisterPage() {
   return (
@@ -23,10 +25,14 @@ export default function RegisterPage() {
               Daftar dengan Apple
             </button>
             <div className="divider text-white">atau</div>
-            <Modal />
+            <Modal style='bg-[#1d9bf0]'>
+              <Register />
+            </Modal>
             <p className='text-[0.7rem] mb-12 text-white'>Dengan mendaftar, Anda menyetujui <span className='cursor-pointer text-[#1d9bf0]'>Persyaratan Layanan</span> dan <span className='cursor-pointer text-[#1d9bf0]'>Kebijakan Privasi</span>, termasuk <span className='cursor-pointer text-[#1d9bf0]'>Penggunaan Kuki</span>.</p>
             <p className='text-xl font-semibold text-white mb-2'>Sudah punya akun?</p>
-            <button className='h-10 rounded-3xl border border-[#1d9bf0] text-white font-semibold'>Masuk</button>
+            <Modal style='border border-[#1d9bf0]'>
+              <Login />
+            </Modal>
           </div>
         </div>
       </div>

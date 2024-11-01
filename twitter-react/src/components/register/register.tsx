@@ -1,8 +1,8 @@
 import { Form, Formik, FormikProps } from 'formik'
 import * as Yup from 'yup'
-import axios from '../helpers/axios'
+import axios from '../../helpers/axios'
 import { useNavigate } from 'react-router-dom'
-import { FormValue } from '../types/user'
+import { FormValue } from '../../types/user'
 import Swal from 'sweetalert2'
 import Input from './input'
 
@@ -22,11 +22,12 @@ export default function Register() {
 
   const handleAdd = async (user: FormValue) => {
     try {
-      await axios.post('/users', user)
-      navigate('/users')
+      const { data } = await axios.post('/users', user)
+      localStorage.setItem('userId', data.id)
+      navigate('/home')
       await Swal.fire({
-        title: "Added",
-        text: `data ${user.username} has been added`,
+        title: "Good job",
+        text: `You already registered`,
         icon: "success"
       });
     } catch (err) {
@@ -42,7 +43,6 @@ export default function Register() {
           initialValues={initialValue}
           validationSchema={RegisterSchema}
           onSubmit={(values, action) => {
-            console.log(values)
             action.resetForm()
             handleAdd(values)
           }}

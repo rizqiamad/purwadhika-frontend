@@ -1,5 +1,5 @@
 import { Field, FormikProps } from "formik";
-import { FormValue } from "../types/user";
+import { FormValue } from "../../types/user";
 
 interface InputProps extends FormikProps<FormValue> {
   type: string
