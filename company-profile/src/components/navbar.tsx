@@ -25,9 +25,9 @@ export default function Navbar() {
           <Image src={'/asus.svg'} alt="Asus" width={75} height={75} />
         </div>
         <div className="flex gap-4">
-          <Image src={'/search.svg'} alt="Asus" width={25} height={25} />
-          <Image src={'/profile.svg'} alt="Asus" width={25} height={25} />
-          <Image src={'/cart.svg'} alt="Asus" width={25} height={25} />
+          <Image src={'/search.svg'} alt="Search" width={25} height={25} />
+          <Image src={'/profile.svg'} alt="Profile" width={25} height={25} />
+          <Image src={'/cart.svg'} alt="Cart" width={25} height={25} />
         </div>
       </div>
     </nav>
