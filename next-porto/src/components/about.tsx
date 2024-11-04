@@ -32,7 +32,7 @@ export default function About() {
           <Image src='/hanifahmad.png' alt="Hanif Ahmad" width={400} height={400} />
         </motion.div>
         <p className="text-center inline-block w-[400px] dark:text-white">My name is Hanif Ahmad Rizqullah, and i'm learning at purwadhika by now. i intend to scale up my coding skill till i can become web developer. I have interest in artificial intelligence.</p>
-    </div>
+      </div>
     </main >
   )
 }

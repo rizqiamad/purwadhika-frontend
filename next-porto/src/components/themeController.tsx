@@ -3,9 +3,9 @@
 import { useEffect, useState } from "react"
 
 export default function ThemeController() {
-  const [theme, setTheme]: any = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light')
+  const [theme, setTheme] = useState<string | null>(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light')
 
-  const handleToogle = (e:any) => {
+  const handleToogle = (e:React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.checked) {
       setTheme('dark')
     } else {
@@ -14,9 +14,9 @@ export default function ThemeController() {
   }
 
   useEffect(() => {
-    localStorage.setItem('theme', theme)
-    const localTheme: any = localStorage.getItem('theme')
-    document.querySelector('html')?.setAttribute('data-theme', localTheme)
+    if (theme) localStorage.setItem('theme', theme)
+    const localTheme = localStorage.getItem('theme')
+    if (localTheme) document.querySelector('html')?.setAttribute('data-theme', localTheme)
   }, [theme])
   return (
     <label className="swap swap-rotate">
