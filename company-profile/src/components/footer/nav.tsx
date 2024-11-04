@@ -14,15 +14,15 @@ export default function NavFooter() {
   return (
     <nav className="flex justify-between">
       <div className="flex gap-6">
-        <Link href={''}>ABOUT ROG</Link>
-        <Link href={''}>HOME</Link>
-        <Link href={''}>NEWSROOM</Link>
-        <Link href={''}>ACCESSIBILITY HELP</Link>
+        <Link href={''} className="hover:text-red-500 hover:border-b-2 border-red-500 transition ease-linear">ABOUT ROG</Link>
+        <Link href={''} className="hover:text-red-500 hover:border-b-2 border-red-500 transition ease-linear">HOME</Link>
+        <Link href={''} className="hover:text-red-500 hover:border-b-2 border-red-500 transition ease-linear">NEWSROOM</Link>
+        <Link href={''} className="hover:text-red-500 hover:border-b-2 border-red-500 transition ease-linear">ACCESSIBILITY HELP</Link>
       </div>
       <div className="flex gap-6">
         {icons.map((icon, idx) => {
           return (
-            <Image key={idx} src={icon} alt={`${icon}`} width={25} height={25} className="hover:text-red-500 cursor-pointer"/>
+            <Image key={idx} src={icon} alt={`${icon}`} width={25} height={25} className="cursor-pointer"/>
           )
         })}
       </div>
