@@ -6,7 +6,7 @@ import resolveResponse from "contentful-resolve-response";
 
 export const getBlogs = async () => {
   try {
-    const res = await fetch(`${base_url}/spaces/${spaceId}/environments/master/entries?access_token=${token}&content_type=blog`)
+    const res = await fetch(`${base_url}/spaces/${spaceId}/environments/master/entries?access_token=${token}&content_type=blog`, { cache: 'no-store' })
     const data = await res.json()
     const result = resolveResponse(data)
     return result
@@ -17,10 +17,10 @@ export const getBlogs = async () => {
 
 export const getBlogSlug = async (slug: string) => {
   try {
-    const res = await fetch(`${base_url}/spaces/${spaceId}/environments/master/entries?access_token=${token}&content_type=blog&fields.slug=${slug}`)
+    const res = await fetch(`${base_url}/spaces/${spaceId}/environments/master/entries?access_token=${token}&content_type=blog&fields.slug=${slug}`, { cache: 'no-store' })
     const data = await res.json()
     const result = resolveResponse(data)
-    return result
+    return result[0]
   } catch (err) {
     console.log(err)
   }
