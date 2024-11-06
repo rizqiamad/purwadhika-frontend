@@ -1,12 +1,12 @@
 import Link from "next/link";
-import Facebook from "../../../public/facebook.svg";
-import X from "../../../public/x.svg";
-import Discord from "../../../public/discord.svg";
-import Youtube from "../../../public/youtube.svg";
-import Twitch from "../../../public/twitch.svg";
-import Instagram from "../../../public/instagram.svg";
-import Tiktok from "../../../public/tiktok.svg";
-import Thread from "../../../public/thread.svg";
+import Facebook from "../../../public/footer/facebook.svg";
+import X from "../../../public/footer/x.svg";
+import Discord from "../../../public/footer/discord.svg";
+import Youtube from "../../../public/footer/youtube.svg";
+import Twitch from "../../../public/footer/twitch.svg";
+import Instagram from "../../../public/footer/instagram.svg";
+import Tiktok from "../../../public/footer/tiktok.svg";
+import Thread from "../../../public/footer/thread.svg";
 import Image from "next/image";
 
 export default function NavFooter() {
@@ -22,7 +22,9 @@ export default function NavFooter() {
       <div className="flex gap-6">
         {icons.map((icon, idx) => {
           return (
-            <Image key={idx} src={icon} alt={`${icon}`} width={25} height={25} className="cursor-pointer"/>
+            <Link href={'/'}>
+              <Image key={idx} src={icon} alt={`${icon}`} width={25} height={25}/>
+            </Link>
           )
         })}
       </div>

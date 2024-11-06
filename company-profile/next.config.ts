@@ -7,9 +7,11 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'dlcdnwebimgs.asus.com',
-        port: '',
         pathname: '/gain/**',
-        search: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'press.asus.com',
       },
     ],
   },

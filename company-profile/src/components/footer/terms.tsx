@@ -5,7 +5,7 @@ export default function Terms() {
   return (
     <div className="flex justify-between">
       <div className="flex gap-3 relative group cursor-pointer items-center hover:border-b hover:border-red-500 transition ease-linear">
-        <Image src={'/language.svg'} alt="Language" width={20} height={20}/>
+        <Image src={'/footer/language.svg'} alt="Language" width={20} height={20}/>
         <span className="text-xs group-hover:text-red-500">Global / English</span>
       </div>
       <div className="flex gap-12">

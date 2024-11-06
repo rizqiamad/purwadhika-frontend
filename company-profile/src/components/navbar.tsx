@@ -7,7 +7,7 @@ export default function Navbar() {
       <div>
         <Link href={'/'}>
           <Image
-            src={'/icon-header.svg'}
+            src={'/navbar/icon-header.svg'}
             alt="Republic of gamers"
             width={160}
             height={160}
@@ -22,12 +22,14 @@ export default function Navbar() {
       </div>
       <div className="flex items-center">
         <div className="pr-6 mr-4 border-e border-l-[rgba(255,255,255,0.5)]">
-          <Image src={'/asus.svg'} alt="Asus" width={75} height={75} />
+          <Link href={'https://www.asus.com/'}>
+            <Image src={'/navbar/asus.svg'} alt="Asus" width={75} height={75} />
+          </Link>
         </div>
         <div className="flex gap-4">
-          <Image src={'/search.svg'} alt="Search" width={25} height={25} />
-          <Image src={'/profile.svg'} alt="Profile" width={25} height={25} />
-          <Image src={'/cart.svg'} alt="Cart" width={25} height={25} />
+          <Image src={'/navbar/search.svg'} alt="Search" width={25} height={25} />
+          <Image src={'/navbar/profile.svg'} alt="Profile" width={25} height={25} />
+          <Image src={'/navbar/cart.svg'} alt="Cart" width={25} height={25} />
         </div>
       </div>
     </nav>
