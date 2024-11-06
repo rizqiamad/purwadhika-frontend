@@ -1,6 +1,5 @@
 'use client'
 
-import styled from 'styled-components';
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination } from 'swiper/modules';
 import { dataProducts } from "./data";
@@ -10,17 +9,15 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Link from "next/link";
 
-import styles from './Carousel.module.css'
-
 export default function CarouselProducts() {
   return (
-    <div className={styles.products}>
+    <div>
       <Swiper
         modules={[Navigation, Pagination]}
         slidesPerView={5}
         navigation
         pagination={{ clickable: true }}
-        loop={true}
+        loop={true} 
         breakpoints={{
           769: {
             slidesPerView: 5,
@@ -41,6 +38,24 @@ export default function CarouselProducts() {
           )
         })}
       </Swiper>
+      <style jsx>{`
+        .swiper-button-next,
+        .swiper-button-prev {
+          color: red !important; /* Mengubah warna panah */
+          top: 4.5rem !important;
+          /* margin: 1rem;  */
+        }
+        
+        .swiper-slide{
+          width: 11rem !important;
+          margin-inline: 2.38rem ;
+        }
+        
+        .swiper-wrapper{
+          margin-bottom: 7rem;
+        }
+      `}</style>
     </div>
+
   )
 }

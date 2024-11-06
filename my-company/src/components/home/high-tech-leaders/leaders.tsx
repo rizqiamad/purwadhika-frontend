@@ -1,3 +1,4 @@
+import Link from "next/link";
 import LeadersInfo from "./leader-info";
 import LeadersImg from "./leadersImg";
 
@@ -61,6 +62,7 @@ export default function Leaders() {
           </div>
         </LeadersInfo>
       </div>
+      <Link href={'/about-us'} className="bg-[#f1f1f1] py-2 px-6 rounded-md self-start font-semibold">MORE ABOUT US</Link>
     </div>
   )
 }
