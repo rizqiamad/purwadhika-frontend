@@ -11,6 +11,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'press.asus.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'randomuser.me',
+      },
     ],
   },
 };

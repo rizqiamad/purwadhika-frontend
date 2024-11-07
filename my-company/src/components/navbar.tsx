@@ -7,7 +7,7 @@ export default function Navbar() {
       <div>
         <Link href={'/'}>
           <Image
-            src={'/navbar/icon-header.svg'}
+            src={'/navbar/rog-logo.svg'}
             alt="Republic of gamers"
             width={160}
             height={160}
@@ -15,10 +15,10 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="flex gap-10">
-        <Link href={'/'} className="hover:text-red-500">Home</Link>
-        <Link href={'/about-us'} className="hover:text-red-500">About Us</Link>
-        <Link href={'/services'} className="hover:text-red-500">Services</Link>
-        <Link href={'/teams'} className="hover:text-red-500">Teams</Link>
+        <Link href={'/'} className="hover:text-red-500 font-semibold">Home</Link>
+        <Link href={'/about-us'} className="hover:text-red-500 font-semibold">About Us</Link>
+        <Link href={'/services'} className="hover:text-red-500 font-semibold">Services</Link>
+        <Link href={'/teams'} className="hover:text-red-500 font-semibold">Teams</Link>
       </div>
       <div className="flex items-center">
         <div className="pr-6 mr-4 border-e border-l-[rgba(255,255,255,0.5)]">
