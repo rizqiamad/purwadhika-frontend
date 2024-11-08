@@ -1,9 +1,11 @@
+import Share from "@/components/share";
 import { goBack } from "@/helpers/back";
 import { getBlogSlug } from "@/libs/blog"
 import { IBlog } from "@/types/blog";
 import { documentToReactComponents, Options } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 import Image from "next/image";
+import { IoArrowBack } from "react-icons/io5";
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const blog: IBlog = await getBlogSlug(params.slug)
@@ -37,7 +39,7 @@ export default async function DetailBlog({ params }: { params: { slug: string } 
     <div className="container mx-auto">
       <div className="lg:mx-36 bg-slate-200 px-12 pb-12 mt-6 rounded-xl">
         <div className="h-20 flex items-center">
-          <button className="bg-slate-300 py-2 px-8 rounded-md font-bold" onClick={goBack}>&lt; Back</button>
+          <button className="py-2 px-2 flex items-center gap-2 font-bold" onClick={goBack}><IoArrowBack /> Back</button>
         </div>
         <div className="flex flex-col gap-2 py-4">
           <div className="text-green-500 font-bold">
@@ -49,6 +51,9 @@ export default async function DetailBlog({ params }: { params: { slug: string } 
             <span> | </span>
             <span>{data.fields.date}</span>
           </div>
+        </div>
+        <div className="mb-6">
+          <Share slug={ params.slug }/>
         </div>
         <div className="relative h-auto rounded-xl overflow-hidden mb-4">
           <Image src={`https:${data.fields.thumbnail.fields.file.url}`} alt={data.fields.title} width={800} height={100} className="w-full" />

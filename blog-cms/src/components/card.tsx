@@ -24,7 +24,7 @@ export default async function Card() {
               <Image src={`https:${item.fields.thumbnail.fields.file.url}`} alt={item.fields.title} fill className="group-hover:scale-[1.2] transition ease-linear" />
             </div>
             <div className="h-[50%] p-2 flex flex-col gap-4">
-              <p className="font-semibold">{titleAdjust(item.fields.title)}</p>
+              <h1 className="font-semibold">{titleAdjust(item.fields.title)}</h1>
               <div className="flex flex-col">
                 <span className="text-xs">{item.fields.author.fields.name} | {item.fields.date}</span>
               </div>
