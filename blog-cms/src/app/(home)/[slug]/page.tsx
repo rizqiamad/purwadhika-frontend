@@ -1,6 +1,7 @@
+import BlogRecom from "@/components/blogRecom";
 import Share from "@/components/share";
 import { goBack } from "@/helpers/back";
-import { getBlogSlug } from "@/libs/blog"
+import { getBlogRecom, getBlogSlug } from "@/libs/blog"
 import { IBlog } from "@/types/blog";
 import { documentToReactComponents, Options } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, MARKS } from "@contentful/rich-text-types";
@@ -10,7 +11,7 @@ import { IoArrowBack } from "react-icons/io5";
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const blog: IBlog = await getBlogSlug(params.slug)
 
-  return{
+  return {
     title: blog.fields.title,
     description: blog.fields.title,
     author: blog.fields.author.fields.name,
@@ -23,6 +24,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 export default async function DetailBlog({ params }: { params: { slug: string } }) {
   const { slug } = params
   const data: IBlog = await getBlogSlug(slug)
+  const blogRecom: IBlog[] = await getBlogRecom(params.slug)
 
   const options: Options = {
     renderNode: {
@@ -37,7 +39,7 @@ export default async function DetailBlog({ params }: { params: { slug: string } 
 
   return (
     <div className="container mx-auto">
-      <div className="lg:mx-36 bg-slate-200 px-12 pb-12 mt-6 rounded-xl">
+      <div className="lg:mx-18 px-12 pb-12 ">
         <div className="h-20 flex items-center">
           <button className="py-2 px-2 flex items-center gap-2 font-bold" onClick={goBack}><IoArrowBack /> Back</button>
         </div>
@@ -53,12 +55,16 @@ export default async function DetailBlog({ params }: { params: { slug: string } 
           </div>
         </div>
         <div className="mb-6">
-          <Share slug={ params.slug }/>
+          <Share slug={params.slug} />
         </div>
         <div className="relative h-auto rounded-xl overflow-hidden mb-4">
           <Image src={`https:${data.fields.thumbnail.fields.file.url}`} alt={data.fields.title} width={800} height={100} className="w-full" />
         </div>
         {documentToReactComponents(data.fields.content, options)}
+        <div className="flex flex-col gap-6 container">
+          <h1 className="text-3xl mb-6 font-semibold border-b-2 border-slate-500 md:text-5xl lg:text-6xl">RECOMMENDATION</h1>
+          <BlogRecom blog={blogRecom}/>
+        </div>
       </div>
     </div>
   )
