@@ -4,7 +4,7 @@ import Timeline from "@/components/about-us/timeline";
 
 export default function AboutUs() {
   return (
-    <div>
+    <main>
       <div className="w-[70vw] mx-auto">
         <div className="mx-auto flex flex-col gap-4 p-6">
           <h1 className="text-6xl font-semibold border-b-2 border-red-500">ABOUT US</h1>
@@ -26,6 +26,6 @@ export default function AboutUs() {
         <Timeline />
       </div>
         <CoreValues />
-    </div>
+    </main>
   );
 }

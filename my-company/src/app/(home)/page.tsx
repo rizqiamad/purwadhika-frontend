@@ -5,11 +5,11 @@ import Review from "@/components/home/review/review";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Hero />
       <Products />
       <Review />
       <Leaders />
-    </>
+    </main>
   );
 }

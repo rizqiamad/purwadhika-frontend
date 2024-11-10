@@ -17,7 +17,7 @@ export default function Navbar() {
       <div className="flex gap-10">
         <Link href={'/'} className="hover:text-red-500 font-semibold">Home</Link>
         <Link href={'/about-us'} className="hover:text-red-500 font-semibold">About Us</Link>
-        <Link href={'/services'} className="hover:text-red-500 font-semibold">Services</Link>
+        <Link href={'/products'} className="hover:text-red-500 font-semibold">Products</Link>
         <Link href={'/teams'} className="hover:text-red-500 font-semibold">Teams</Link>
       </div>
       <div className="flex items-center">

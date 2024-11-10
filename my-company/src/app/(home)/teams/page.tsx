@@ -3,9 +3,9 @@ import Teams from "@/components/teams/teams";
 
 export default function TeamsPage() {
   return (
-    <div className="container my-12">
+    <main className="container my-12">
       <GridTeams />
       <Teams />
-    </div>
+    </main>
   );
 }
