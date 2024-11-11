@@ -12,14 +12,14 @@ import Image from "next/image";
 export default function NavFooter() {
   const icons = [Facebook, X, Discord, Youtube, Twitch, Instagram, Tiktok, Thread]
   return (
-    <nav className="flex justify-between">
-      <div className="flex gap-6">
-        <Link href={''} className="hover:text-red-500 hover:border-b-2 border-red-500 transition ease-linear">ABOUT ROG</Link>
-        <Link href={''} className="hover:text-red-500 hover:border-b-2 border-red-500 transition ease-linear">HOME</Link>
-        <Link href={''} className="hover:text-red-500 hover:border-b-2 border-red-500 transition ease-linear">NEWSROOM</Link>
-        <Link href={''} className="hover:text-red-500 hover:border-b-2 border-red-500 transition ease-linear">ACCESSIBILITY HELP</Link>
+    <nav className="flex flex-col tablet:flex-row tablet:justify-between gap-5">
+      <div className="flex flex-col tablet:flex-row tablet:gap-6 gap-4">
+        <Link href={''} className="hover:text-red-500 tablet:border-transparent border-slate-500 tablet:hover:border-b-2 border-b hover:border-red-500 transition ease-linear">ABOUT ROG</Link>
+        <Link href={''} className="hover:text-red-500 tablet:border-transparent border-slate-500 tablet:hover:border-b-2 border-b hover:border-red-500 transition ease-linear">HOME</Link>
+        <Link href={''} className="hover:text-red-500 tablet:border-transparent border-slate-500 tablet:hover:border-b-2 border-b hover:border-red-500 transition ease-linear">NEWSROOM</Link>
+        <Link href={''} className="hover:text-red-500 tablet:border-transparent border-slate-500 tablet:hover:border-b-2 border-b hover:border-red-500 transition ease-linear">ACCESSIBILITY HELP</Link>
       </div>
-      <div className="flex gap-6">
+      <div className="flex gap-6 self-center">
         {icons.map((icon, idx) => {
           return (
             <Link href={'/'}>

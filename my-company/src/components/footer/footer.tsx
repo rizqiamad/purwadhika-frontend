@@ -1,4 +1,3 @@
-import Image from "next/image";
 import NavFooter from "./nav";
 import Terms from "./terms";
 

@@ -102,20 +102,20 @@ export const dataProducts = [
       "https://dlcdnwebimgs.asus.com/gain/7A8E0C01-7EBA-49FF-977E-352D6EAAA8BC/w240/h175",
     alt: "Streaming Kits",
     href: "https://rog.asus.com/id/streaming-kits-group/allmodels/",
-    title: "Streaming Kits",
+    title: "Streaming Kits",  
   },
   {
     image:
       "https://dlcdnwebimgs.asus.com/gain/85A00D94-1EFE-424F-9C02-CE0EDBB646D1/w240/h175",
-    alt: "Controller",
+    alt: "Controllers",
     href: "https://rog.asus.com/id/controllers-group/allmodels/",
-    title: "Controller",
+    title: "Controllers",
   },
   {
     image:
       "https://dlcdnwebimgs.asus.com/gain/D8D19FB9-2485-478F-9E58-4344265E0E69/w240/h175",
     alt: "Storage",
-    href: "https://rog.asus.com/id/storage/rog-strix-arion-model/",
+    href: "https://rog.asus.com/storage-group/allmodels/",
     title: "Storage",
   },
   {

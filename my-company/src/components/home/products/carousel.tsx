@@ -38,24 +38,6 @@ export default function CarouselProducts() {
           )
         })}
       </Swiper>
-      <style jsx>{`
-        .swiper-button-next,
-        .swiper-button-prev {
-          color: red !important; /* Mengubah warna panah */
-          top: 4.5rem !important;
-          /* margin: 1rem;  */
-        }
-        
-        .swiper-slide{
-          width: 11rem !important;
-          margin-inline: 2.38rem ;
-        }
-        
-        .swiper-wrapper{
-          margin-bottom: 7rem;
-        }
-      `}</style>
     </div>
-
   )
 }
