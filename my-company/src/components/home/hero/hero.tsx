@@ -6,8 +6,10 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css'
 import 'swiper/swiper-bundle.css'
 import Image from "next/image";
+import { useMediaQuery } from "react-responsive";
 
 export default function Hero() {
+  const xs = useMediaQuery({ query: 'min-width(540px)' })
   return (
     <Swiper
       modules={[Autoplay, Pagination]}
@@ -18,13 +20,12 @@ export default function Hero() {
       }}
       pagination={{ clickable: true }}
       loop={true}
-      className="h-[90vh] aspect-auto"
     >
       {dataHero.map((img, idx) => {
         return (
           <SwiperSlide key={idx}>
-            <div className="relative w-[100%] h-[100%]">
-              <Image src={img.src} alt={img.alt} fill />
+            <div>
+              {xs ? (<Image src={img.src} alt={img.alt} height={500} width={2000} />) : (<Image src={img.responsiveSrc} alt={img.alt} height={1500} width={500} />)}
             </div>
           </SwiperSlide>
         )

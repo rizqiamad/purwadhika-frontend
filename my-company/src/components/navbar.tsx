@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <nav className="navbar px-[2rem] bg-black text-white">
-      <div className="navbar-start tablet:hidden">
+      <div className="navbar-start w-[40%] tablet:hidden">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <svg
@@ -52,7 +52,7 @@ export default function Navbar() {
             <Image src={'/navbar/asus.svg'} alt="Asus" width={75} height={75} />
           </Link>
         </div>
-        <div className="tablet:flex gap-4 hidden">
+        <div className="tablet:flex tablet:gap-4 hidden">
           <Image src={'/navbar/search.svg'} alt="Search" width={25} height={25} />
           <Image src={'/navbar/profile.svg'} alt="Profile" width={25} height={25} />
           <Image src={'/navbar/cart.svg'} alt="Cart" width={25} height={25} />

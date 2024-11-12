@@ -8,10 +8,10 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    screens: {
-      'tablet': '960px',
-    },
     extend: {
+      screens: {
+        'tablet': '960px',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
