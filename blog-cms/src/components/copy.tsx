@@ -14,11 +14,12 @@ export default function CopyButton({ link }: { link: string }) {
         copy(link)
         setCopied(true)
       }}
+      data-cy='copy-button'
       onMouseLeave={() => setTimeout(() => {
         setCopied(false)
       }, 1000)}
     >
-      {copied ? <FaCheck /> : <FaLink />}
+      {copied ? <FaCheck data-cy='check-icon'/> : <FaLink data-cy='link-icon'/>}
     </div>
   )
 }
