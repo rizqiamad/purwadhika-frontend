@@ -1,2 +1,1 @@
-npm run cy:run-comp
-npm run cy:run
+npm cy:run
