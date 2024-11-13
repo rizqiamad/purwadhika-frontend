@@ -11,7 +11,10 @@ const nextConfig = {
       },
       {
         hostname: 'www.blogger.com'
-      }
+      },
+      {
+        hostname: 'lh3.googleusercontent.com'
+      },
     ],
   },
 };
