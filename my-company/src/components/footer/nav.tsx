@@ -22,7 +22,7 @@ export default function NavFooter() {
       <div className="flex gap-6 self-center">
         {icons.map((icon, idx) => {
           return (
-            <Link href={'/'}>
+            <Link href={'/'} key={idx}>
               <Image key={idx} src={icon} alt={`${icon}`} width={25} height={25}/>
             </Link>
           )
