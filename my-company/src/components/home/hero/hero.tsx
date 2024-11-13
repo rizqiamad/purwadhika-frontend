@@ -32,9 +32,9 @@ export default function Hero() {
           <SwiperSlide key={idx}>
             <div>
               {queryMatch ?
-                (<Image src={img.src} alt={img.alt} height={500} width={2000} />)
+                (<Image src={img.src} alt={img.alt} height={500} width={2000} priority/>)
                 :
-                (<Image src={img.responsiveSrc} alt={img.alt} height={500} width={540} />)
+                (<Image src={img.responsiveSrc} alt={img.alt} height={500} width={540} priority />)
               }
             </div>
           </SwiperSlide>
