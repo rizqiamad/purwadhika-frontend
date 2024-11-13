@@ -8,7 +8,9 @@ export default async function SlugException({ slug }: { slug: string }) {
   const data: IBlogProduct[] = await getDataProductsSlugException(slug)
   return (
     <div>
-      <BackButton />
+      <div className="hidden lg:block">
+        <BackButton />
+      </div>
       <h1 className="text-4xl text-center font-semibold py-6 lg:text-[1.1rem]">RELATED PRODUCTS</h1>
       <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-4">
         {data.map((item, idx) => {

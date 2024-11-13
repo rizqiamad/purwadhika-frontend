@@ -5,6 +5,7 @@ import { documentToReactComponents, Options } from '@contentful/rich-text-react-
 import { BLOCKS } from "@contentful/rich-text-types";
 import ReviewProducts from "@/components/products/review";
 import SlugException from "@/components/products/slugException";
+import BackButton from "@/components/about-us/backButton";
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const blog: IBlogProduct = await getDataProductsSlug(params.slug)
@@ -31,6 +32,9 @@ export default async function ProductDetail({ params }: { params: { slug: string
   return (
     <main className="flex flex-col lg:flex-row-reverse mx-6 lg:mx-0">
       <div className="mx-6 sm:mx-28 md:mx-48 lg:mx-28 flex flex-col items-center">
+        <div className="self-start mt-6 lg:hidden">
+          <BackButton />
+        </div>
         <div>
           <Image
             src={`https:${data.fields.thumbnail.fields.file.url}`}
