@@ -6,6 +6,18 @@ import { BLOCKS } from "@contentful/rich-text-types";
 import ReviewProducts from "@/components/products/review";
 import SlugException from "@/components/products/slugException";
 
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const blog: IBlogProduct = await getDataProductsSlug(params.slug)
+
+  return {
+    title: blog.fields.title,
+    description: "ROG Gaming",
+    openGraph: {
+      images: [`https:${blog.fields.thumbnail.fields.file.url}`]
+    }
+  }
+}
+
 export default async function ProductDetail({ params }: { params: { slug: string } }) {
   const data: IBlogProduct = await getDataProductsSlug(params.slug)
 
@@ -17,8 +29,8 @@ export default async function ProductDetail({ params }: { params: { slug: string
     }
   }
   return (
-    <main className="flex flex-col">
-      <div className="mx-12 sm:mx-28 md:mx-48 flex flex-col items-center">
+    <main className="flex flex-col lg:flex-row-reverse mx-6 lg:mx-0">
+      <div className="mx-6 sm:mx-28 md:mx-48 lg:mx-28 flex flex-col items-center">
         <div>
           <Image
             src={`https:${data.fields.thumbnail.fields.file.url}`}
@@ -32,8 +44,8 @@ export default async function ProductDetail({ params }: { params: { slug: string
         </div>
         <ReviewProducts title={data.fields.title} />
       </div>
-      <div>
-        <SlugException slug={params.slug}/>
+      <div className="mx-6 my-6 sm:mx-28 md:mx-48 lg:mx-12 lg:w-[100%]">
+        <SlugException slug={params.slug} />
       </div>
     </main>
   )

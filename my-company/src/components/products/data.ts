@@ -3,7 +3,7 @@ export const dataDetailedPage = [
     title: "Laptop",
     name: "Caca",
     review:
-      'Saya baru saja membeli laptop ROG dan saya sangat terkesan dengan performanya! Laptop ini memiliki kecepatan luar biasa, bahkan untuk game berat sekalipun. Desainnya keren dan tampak premium, dan saya bisa mengandalkannya untuk kerja berat sehari-hari. Dengan sistem pendingin yang efektif, saya bisa bermain game selama berjam-jam tanpa khawatir laptop panas. Benar-benar investasi yang sangat memuaskan!',
+      "Saya baru saja membeli laptop ROG dan saya sangat terkesan dengan performanya! Laptop ini memiliki kecepatan luar biasa, bahkan untuk game berat sekalipun. Desainnya keren dan tampak premium, dan saya bisa mengandalkannya untuk kerja berat sehari-hari. Dengan sistem pendingin yang efektif, saya bisa bermain game selama berjam-jam tanpa khawatir laptop panas. Benar-benar investasi yang sangat memuaskan!",
     link: "https://rog.asus.com/id/laptops-group/",
   },
   {
@@ -49,7 +49,7 @@ export const dataDetailedPage = [
     link: "https://rog.asus.com/id/power-supply-units-group/",
   },
   {
-    title: "External Graphic Docks",
+    title: "External Graphic Dock",
     name: "Lili Setyawati",
     review:
       "This is the best laptop gaming i've ever experiencedExternal graphic dock dari ROG ini mengubah laptop biasa saya menjadi mesin gaming yang tangguh. Koneksi mudah dan performanya mengesankan. Sangat cocok untuk para pekerja yang ingin sesekali bermain game serius.",

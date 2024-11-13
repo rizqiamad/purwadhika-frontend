@@ -47,25 +47,25 @@ export default function TeamsCarousel({ dataRandomUser }: { dataRandomUser: IRan
       breakpoints={{
         960: {
           slidesPerView: 5,
-          slidesPerGroup: 5,
+          slidesPerGroup: 1,
         },
         768: {
           slidesPerView: 4,
-          slidesPerGroup: 4,
+          slidesPerGroup: 1,
         },
         640: {
           slidesPerView: 3,
-          slidesPerGroup: 3,
+          slidesPerGroup: 1,
         },
         420: {
           slidesPerView: 2,
-          slidesPerGroup: 2,
+          slidesPerGroup: 1,
         },
       }}
     >
       {dataRandomUser?.map((user, idx) => {
         return (
-          <SwiperSlide key={idx} className='bg-slate-300 rounded-md'>
+          <SwiperSlide key={idx} className='bg-black text-white rounded-md'>
             <div className="rounded-md overflow-hidden">
               <Image src={user.picture.large} alt={user.name.first} width={150} height={300} className='w-full hover:scale-[1.1] transition ease-linear duration-200' />
             </div>
