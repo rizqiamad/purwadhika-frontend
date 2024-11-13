@@ -7,15 +7,21 @@ import 'swiper/css'
 import 'swiper/swiper-bundle.css'
 import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
-  const xs = useMediaQuery({ query: 'min-width(540px)' })
+  const [queryMatch, setQueryMatch] = useState<boolean>(false);
+  const xs = useMediaQuery({ query: '(min-width:540px)' })
+
+  useEffect(()=>{
+    setQueryMatch(xs)
+  },[xs])
   return (
     <Swiper
       modules={[Autoplay, Pagination]}
       slidesPerView={1}
       autoplay={{
-        delay: 2500,
+        delay: 1500,
         disableOnInteraction: false,
       }}
       pagination={{ clickable: true }}
@@ -25,7 +31,11 @@ export default function Hero() {
         return (
           <SwiperSlide key={idx}>
             <div>
-              {xs ? (<Image src={img.src} alt={img.alt} height={500} width={2000} />) : (<Image src={img.responsiveSrc} alt={img.alt} height={1500} width={500} />)}
+              {queryMatch ?
+                (<Image src={img.src} alt={img.alt} height={500} width={2000} />)
+                :
+                (<Image src={img.responsiveSrc} alt={img.alt} height={500} width={540} />)
+              }
             </div>
           </SwiperSlide>
         )

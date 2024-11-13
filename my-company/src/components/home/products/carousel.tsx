@@ -8,8 +8,30 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
-export default function CarouselProducts({ views }: { views: number }) {
+export default function CarouselProducts() {
+  const [views, setViews] = useState(5);
+
+  const isTablet = useMediaQuery({ query: '(min-width: 960px)' });
+  const isMid = useMediaQuery({ query: '(min-width: 768px)' });
+  const isSmall = useMediaQuery({ query: '(min-width: 640px)' });
+  const isSmallest = useMediaQuery({ query: '(min-width: 420px)' });
+
+  useEffect(() => {
+    if (isTablet) {
+      setViews(5);
+    } else if (isMid) {
+      setViews(4);
+    } else if (isSmall) {
+      setViews(3);
+    } else if (isSmallest) {
+      setViews(2);
+    } else {
+      setViews(1); // Jika di bawah ukuran isSmallest
+    }
+  }, [isTablet, isMid, isSmall, isSmallest]);
   return (
     <div>
       <Swiper
@@ -19,9 +41,21 @@ export default function CarouselProducts({ views }: { views: number }) {
         pagination={{ clickable: true }}
         loop={true}
         breakpoints={{
-          250: {
-            slidesPerView: views,
-            slidesPerGroup: views,
+          960: {
+            slidesPerView: 5,
+            slidesPerGroup: 5,
+          },
+          768: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+          },
+          640: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+          },
+          420: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
           },
         }}
       >

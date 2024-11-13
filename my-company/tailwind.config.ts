@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       screens: {
         'tablet': '960px',
+        'smallest': '306px'
       },
       colors: {
         background: "var(--background)",

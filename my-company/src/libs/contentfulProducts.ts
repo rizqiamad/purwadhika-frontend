@@ -31,3 +31,17 @@ export const getDataProductsSlug = async (slug: string) => {
     console.log(err)
   }
 }
+
+export const getDataProductsSlugException = async (slug: string) => {
+  try {
+    const res = await fetch(
+      `${base_url}/spaces/${spaceId}/environments/rog-company-profile/entries?access_token=${token}&content_type=blog&fields.slug[ne]=${slug}&limit=5`,
+      { next: { revalidate: 0 } }
+    );
+    const data = await res.json()
+    const result = resolveResponse(data);
+    return result
+  } catch (err) {
+    console.log(err)
+  }
+}

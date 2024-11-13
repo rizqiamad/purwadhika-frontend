@@ -1,9 +1,14 @@
 'use client'
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 export default function FooterBgImg({ children }: { children: ReactNode }) {
-  const isTablet = useMediaQuery({ query: '(min-width: 960px)' })
+  const [isTablet, setIsTablet] = useState<boolean>();
+  const mediaQueryMatch = useMediaQuery({ query: '(min-width: 960px)' })
+
+  useEffect(() => {
+    setIsTablet(mediaQueryMatch)
+  },[mediaQueryMatch])
 
   if (isTablet) {
     return (
