@@ -13,9 +13,9 @@ export default function Hero() {
   const [queryMatch, setQueryMatch] = useState<boolean>(false);
   const xs = useMediaQuery({ query: '(min-width:540px)' })
 
-  useEffect(()=>{
+  useEffect(() => {
     setQueryMatch(xs)
-  },[xs])
+  }, [xs])
   return (
     <Swiper
       modules={[Autoplay, Pagination]}
@@ -30,11 +30,28 @@ export default function Hero() {
       {dataHero.map((img, idx) => {
         return (
           <SwiperSlide key={idx}>
-            <div>
+            <div style={{ position: 'relative', width: '100%', height: 'auto', overflow: 'hidden'}}>
               {queryMatch ?
-                (<Image src={img.src} alt={img.alt} height={500} width={2000} priority/>)
-                :
-                (<Image src={img.responsiveSrc} alt={img.alt} height={500} width={540} priority />)
+                (<Image
+                  src={img.src}
+                  alt={img.alt}
+                  layout="responsive" // Switch to responsive layout
+                  width={2000} // Maintain proportional width
+                  height={500} // Maintain proportional height
+                  objectFit="cover" // Prevents image distortion and maintains aspect ratio
+                  priority
+                />
+                ) : (
+                  <Image
+                    src={img.responsiveSrc}
+                    alt={img.alt}
+                    layout="responsive" // Switch to responsive layout
+                    width={540} // Adjust width for smaller screens
+                    height={500} // Maintain proportional height
+                    objectFit="cover" // Prevents image distortion and maintains aspect ratio
+                    priority
+                  />
+                )
               }
             </div>
           </SwiperSlide>
