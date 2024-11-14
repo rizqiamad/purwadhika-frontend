@@ -30,25 +30,21 @@ export default function Hero() {
       {dataHero.map((img, idx) => {
         return (
           <SwiperSlide key={idx}>
-            <div style={{ position: 'relative', width: '100%', height: 'auto', overflow: 'hidden'}}>
+            <div>
               {queryMatch ?
                 (<Image
                   src={img.src}
                   alt={img.alt}
-                  layout="responsive" // Switch to responsive layout
-                  width={2000} // Maintain proportional width
-                  height={500} // Maintain proportional height
-                  objectFit="cover" // Prevents image distortion and maintains aspect ratio
+                  height={500}
+                  width={2000}
                   priority
                 />
                 ) : (
                   <Image
                     src={img.responsiveSrc}
                     alt={img.alt}
-                    layout="responsive" // Switch to responsive layout
-                    width={540} // Adjust width for smaller screens
-                    height={500} // Maintain proportional height
-                    objectFit="cover" // Prevents image distortion and maintains aspect ratio
+                    height={500}
+                    width={540}
                     priority
                   />
                 )
