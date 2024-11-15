@@ -39,7 +39,6 @@ export default function Share({ slug }: { slug: string }) {
     <div>
       <p className="font-semibold mb-4">BAGIKAN</p>
       <div className="flex gap-3">
-        <CopyButton link={`${domain}${slug}`}/>
         {share.map((item, idx) => {
           return (
             <Link key={idx} href={`${item.link}${domain}${slug}`} className={item.style}>
@@ -47,6 +46,7 @@ export default function Share({ slug }: { slug: string }) {
             </Link>
           )
         })}
+        <CopyButton link={`${domain}${slug}`}/>
       </div>
     </div>
   )

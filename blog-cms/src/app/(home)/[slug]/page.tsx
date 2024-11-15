@@ -38,7 +38,7 @@ export default async function DetailBlog({ params }: { params: { slug: string } 
   }
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto md:max-w-[700px]">
       <div className="lg:mx-18 px-12 pb-12 ">
         <div className="h-20 flex items-center">
           <button className="py-2 px-2 flex items-center gap-2 font-bold" onClick={goBack}><IoArrowBack /> Back</button>
@@ -62,7 +62,7 @@ export default async function DetailBlog({ params }: { params: { slug: string } 
         </div>
         {documentToReactComponents(data.fields.content, options)}
         <div className="flex flex-col gap-6 container">
-          <h1 className="text-3xl mb-6 font-semibold border-b-2 border-slate-500 md:text-5xl lg:text-6xl">RECOMMENDATION</h1>
+          <h1 className="text-2xl sm:text-3xl mb-6 font-semibold border-b-2 border-slate-500 md:text-5xl lg:text-6xl">RECOMMENDATION</h1>
           <BlogRecom blog={blogRecom}/>
         </div>
       </div>
