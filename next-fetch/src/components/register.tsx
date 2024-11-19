@@ -4,7 +4,7 @@ import { Field, Form, Formik, FormikProps } from 'formik'
 import * as Yup from 'yup'
 
 const RegisterSchema = Yup.object().shape({
-  username: Yup.string().required('username is required'),
+  name: Yup.string().required('name is required'),
   email: Yup.string()
     .email('invalid email format')
     .required('email is required'),
@@ -14,19 +14,20 @@ const RegisterSchema = Yup.object().shape({
 })
 
 interface FormValue {
-  username: string
+  name: string
   email: string
   password: string
 }
 
 export default function Register() {
-  const initialValue: FormValue = { username: '', email: '', password: '' }
+  const initialValue: FormValue = { name: '', email: '', password: '' }
 
   const handleAdd = async (user: FormValue) => {
     try {
-      await fetch('http://localhost:2000/users', {
+      await fetch('http://localhost:8000/api/users', {
         method: 'POST',
-        body: JSON.stringify(user)
+        body: JSON.stringify(user),
+        headers: { 'content-type': 'application/json' },
       })
       alert('user berhasil di tambahkan')
     } catch (err) {
@@ -52,18 +53,18 @@ export default function Register() {
             return (
               <Form className='flex flex-col gap-4 mt-4'>
                 <div className='flex flex-col'>
-                  <label htmlFor="username" className='pb-2 font-semibold'>Username :</label>
+                  <label htmlFor="name" className='pb-2 font-semibold'>Name :</label>
                   <Field
                     type='text'
-                    name='username'
-                    id='username'
+                    name='name'
+                    id='name'
                     onChange={handleChange}
-                    value={values.username}
-                    placeholder='Username'
+                    value={values.name}
+                    placeholder='Name'
                     className='outline-none px-2 py-1 rounded-md bg-slate-200 border border-slate-400'
                   />
-                  {touched.username && errors.username ? (
-                    <div className='text-red-500 text-xs'>{errors.username}</div>
+                  {touched.name && errors.name ? (
+                    <div className='text-red-500 text-xs'>{errors.name}</div>
                   ) : null}
                 </div>
                 <div className='flex flex-col'>
