@@ -16,7 +16,7 @@ export default async function Card() {
   }
 
   return (
-    <div className="px-6 flex flex-wrap gap-4 mt-4 justify-center md:justify-center">
+    <div className="px-6 flex flex-wrap gap-4 justify-center md:justify-center">
       {data.map((item, idx) => {
         return (
           <Link key={idx} href={`/${item.fields.slug}`} className="flex flex-col overflow-hidden group shadow-2xl rounded-md h-96 w-72" data-cy='blog-item'>
