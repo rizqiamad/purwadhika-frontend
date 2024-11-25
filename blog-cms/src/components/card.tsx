@@ -19,7 +19,7 @@ export default async function Card() {
     <div className="px-6 flex flex-wrap gap-4 justify-center md:justify-center">
       {data.map((item, idx) => {
         return (
-          <Link key={idx} href={`/${item.fields.slug}`} className="flex flex-col overflow-hidden group shadow-2xl rounded-md h-96 w-72" data-cy='blog-item'>
+          <Link key={idx} href={`/blogs/${item.fields.slug}`} className="flex flex-col overflow-hidden group shadow-2xl rounded-md h-96 w-72" data-cy='blog-item'>
             <div className="h-[50%] rounded-lg relative overflow-hidden">
               <Image src={`https:${item.fields.thumbnail.fields.file.url}`} alt={item.fields.title} fill className="group-hover:scale-[1.2] transition ease-linear" />
             </div>

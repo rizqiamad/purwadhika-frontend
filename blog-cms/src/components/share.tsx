@@ -41,7 +41,7 @@ export default function Share({ slug }: { slug: string }) {
       <div className="flex gap-3">
         {share.map((item, idx) => {
           return (
-            <Link key={idx} href={`${item.link}${domain}${slug}`} className={item.style}>
+            <Link key={idx} href={`${item.link}${domain}blogs/${slug}`} className={item.style}>
               <item.Icon className="text-2xl" />
             </Link>
           )

@@ -3,28 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import ButtonSignIn from "./buttonSign-in";
-import { useEffect, useState } from "react";
 import supabase from "@/services/supabase";
-import { User } from "@supabase/supabase-js";
+import { useSession } from "@/hooks/useSession";
 
 export default function Navbar() {
-  const [user, setUser] = useState<User | undefined>(undefined)
+  const user = useSession()
 
-  const getSession = () => {
-    supabase.auth.onAuthStateChange((event, session) => {
-      // console.log(session)
-      setUser(session?.user)
-    })
-  }
-
-  const onLogout= () => {
+  const onLogout = () => {
     supabase.auth.signOut()
   }
-
-  useEffect(() => {
-    getSession()
-  }, [])
-
   return (
     <nav className="flex justify-between px-6 items-center h-16 bg-slate-300">
       <div className="flex items-center gap-4 font-bold">
@@ -33,8 +20,7 @@ export default function Navbar() {
       </div>
       <div className={`gap-4 font-semibold ${user ? `flex` : `hidden`}`}>
         <Link href={'/'} className="hover:text-white">Home</Link>
-        <Link href={'/blog'} className="hover:text-white">Blog</Link>
-        <Link href={'/about'} className="hover:text-white">About</Link>
+        <Link href={'/blogs'} className="hover:text-white">Blog</Link>
       </div>
       <div>
         {

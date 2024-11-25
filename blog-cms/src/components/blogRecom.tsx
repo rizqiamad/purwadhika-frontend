@@ -19,7 +19,7 @@ export default function BlogRecom({ blog }: { blog: IBlog[] }) {
                 <div>|</div>
                 <div>{item.fields.date}</div>
               </div>
-              <Link href={`/${item.fields.slug}`} className="hover:text-white px-4 py-2 bg-green-500 rounded-md font-semibold">READ MORE</Link>
+              <Link href={`/blogs/${item.fields.slug}`} className="hover:text-white px-4 py-2 bg-green-500 rounded-md font-semibold">READ MORE</Link>
             </div>
           </div>
         )
