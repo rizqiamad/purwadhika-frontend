@@ -24,7 +24,7 @@ const useSession = () => {
     checkSession();
   }, []);
 
-  return { user, isAuth };
+  return { user, isAuth, setIsAuth };
 };
 
 export default useSession;

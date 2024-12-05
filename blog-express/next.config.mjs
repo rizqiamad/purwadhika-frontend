@@ -7,6 +7,12 @@ const nextConfig = {
       },
       {
         hostname: 'purwadhika-frontend-blog.vercel.app'
+      },
+      {
+        hostname: 'localhost'
+      },
+      {
+        hostname: 'res.cloudinary.com'
       }
     ]
   }

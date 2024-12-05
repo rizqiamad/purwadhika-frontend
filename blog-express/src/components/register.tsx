@@ -2,6 +2,7 @@
 
 import { Field, Form, Formik, FormikProps } from 'formik'
 import { useRouter } from 'next/navigation'
+import { useState } from 'react'
 import { toast } from 'react-toastify'
 import * as Yup from 'yup'
 
@@ -28,9 +29,11 @@ interface FormValue {
 export default function Register() {
   const initialValue: FormValue = { username: '', email: '', password: '', confirmPassword: '' }
   const router = useRouter();
+  const [isLoading, SetIsLoading] = useState<boolean>(false);
 
   const handleAdd = async (user: FormValue) => {
     try {
+      SetIsLoading(true)
       const res = await fetch('http://localhost:8000/api/auth/register', {
         method: 'POST',
         body: JSON.stringify(user),
@@ -45,6 +48,8 @@ export default function Register() {
     } catch (err: any) {
       console.log(err)
       toast.error(err.message)
+    } finally {
+      SetIsLoading(false)
     }
   }
 
@@ -125,8 +130,8 @@ export default function Register() {
                     <div className='text-red-500 text-xs'>{errors.confirmPassword}</div>
                   ) : null}
                 </div>
-                <button type='submit' className='py-2 rounded-lg hover:bg-lime-500 transition ease-linear hover:text-white font-semibold border-2 border-lime-500'>
-                  Register
+                <button disabled={isLoading} type='submit' className={`${isLoading ? 'disabled:opacity-[0.5] disabled:bg-lime-500 text-white' : 'hover:bg-lime-500 hover:text-white'} py-2 rounded-lg transition ease-linear font-semibold border-2 border-lime-500`}>
+                  {isLoading ? 'Loading ...' : 'Register'}
                 </button>
               </Form>
             )

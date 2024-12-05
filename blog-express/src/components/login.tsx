@@ -3,6 +3,7 @@
 import { Field, Form, Formik, FormikProps } from 'formik'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import { useState } from 'react'
 import { toast } from 'react-toastify'
 import * as Yup from 'yup'
 
@@ -21,23 +22,28 @@ interface FormValue {
 export default function Login() {
   const initialValue: FormValue = { data: '', password: '' }
   const router = useRouter();
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const handleLogin = async (user: FormValue) => {
     try {
+      setIsLoading(true)
       const res = await fetch('http://localhost:8000/api/auth/login', {
         method: 'POST',
         body: JSON.stringify(user),
-        headers: { 
+        headers: {
           'content-type': 'application/json',
         },
         credentials: 'include'
       })
       const data = await res.json();
+      if (!res.ok) throw data
       router.push('/')
       toast.success(data.message)
-    } catch (err:any) {
+    } catch (err: any) {
       console.log(err)
       toast.error(err.message)
+    } finally {
+      setIsLoading(false)
     }
   }
 
@@ -89,8 +95,8 @@ export default function Login() {
                   ) : null}
                 </div>
                 <Link href={'/register'} className='text-sm text-blue-500'>Register</Link>
-                <button type='submit' className='py-2 rounded-lg hover:bg-lime-500 transition ease-linear hover:text-white font-semibold border-2 border-lime-500'>
-                  Login
+                <button disabled={isLoading} type='submit' className={`${isLoading ? 'disabled:opacity-[0.5] disabled:bg-lime-500 text-white' : 'hover:bg-lime-500 hover:text-white'} py-2 rounded-lg transition ease-linear font-semibold border-2 border-lime-500`}>
+                  {isLoading ? 'Loading ...' : 'Login'}
                 </button>
               </Form>
             )
